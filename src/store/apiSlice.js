@@ -31,5 +31,11 @@ const baseQueryWithReaouth = async (args, api, extraOptions) => {
             api.dispatch(logOut())
         }
     }
+
     return result
 }
+
+export const apiSlice = createApi({
+    baseQuery: baseQueryWithReaouth,
+    endpoints: builder => ({})
+})
